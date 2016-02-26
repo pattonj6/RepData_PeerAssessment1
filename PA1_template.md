@@ -161,7 +161,7 @@ print(bydate.median)
 
 ## What is the average daily activity pattern?
 
-Plot time series plot of the 5-minute interval (x-axis) and the average number 
+Plot time series of the 5-minute interval (x-axis) and the average number 
 of steps taken, averaged across all days (y-axis) calculate mean steps by 5-minute interval.
 
 

@@ -157,7 +157,7 @@ print(bydate.mean)</code></pre>
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
 <h2>What is the average daily activity pattern?</h2>
-<p>Plot time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis) calculate mean steps by 5-minute interval.</p>
+<p>Plot time series of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis) calculate mean steps by 5-minute interval.</p>
 <pre class="r"><code>dt_data_byinterval &lt;- dt_data[ ,.(mean.steps=mean(steps, na.rm = TRUE)),by=interval]
 
 a_byinterval &lt;- ggplot(dt_data_byinterval, aes(interval, mean.steps))
