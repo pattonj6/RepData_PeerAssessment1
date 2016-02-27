@@ -316,3 +316,4 @@ print(a_w_daytype + geom_line() +
 
 ![](PA1_template_files/figure-html/unnamed-chunk-16-1.png) 
 
+The weekday average number of steps peaks at a higher value >200 in the 835 interval (shown prior), but the weekend has 4-5 peaks that approach 150 steps.  The weekday only has a single peak over 150 and it is that maximum peak at 835.  The time range (start/stop) for steps is approximately the same for weekday and weekend.
