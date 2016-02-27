@@ -205,6 +205,14 @@ sum(is.na(dt_data$steps))
 ## [1] 2304
 ```
 
+```r
+sum(is.na(dt_data$steps))/nrow(dt_data)
+```
+
+```
+## [1] 0.1311475
+```
+
 Impute NA values...
 I am using the mean number of steps by interval.
 data.table continues to be the flow that works best for me, 
@@ -256,6 +264,8 @@ print(bydate.imputed.median)
 ```
 ## [1] 10641
 ```
+
+The imputed dataset has a reduced mean and median, most of the NA values were replaced with 0,1,2 values since they occurred early in the day.  Adding these into the dataset brought down the overall mean and median.
 
 ##Are there differences in activity patterns between weekdays and weekends?
 

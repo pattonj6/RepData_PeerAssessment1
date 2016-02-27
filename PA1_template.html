@@ -178,6 +178,8 @@ print(a_byinterval + geom_line() +
 <p>Calculate the total number of NA rows.</p>
 <pre class="r"><code>sum(is.na(dt_data$steps))</code></pre>
 <pre><code>## [1] 2304</code></pre>
+<pre class="r"><code>sum(is.na(dt_data$steps))/nrow(dt_data)</code></pre>
+<pre><code>## [1] 0.1311475</code></pre>
 <p>Impute NA values… I am using the mean number of steps by interval. data.table continues to be the flow that works best for me, so I am sticking with it. (instead of dplyr)</p>
 <pre class="r"><code>impute.mean &lt;- function(x) replace(x, is.na(x), as.integer(mean(x, na.rm = TRUE)))
 
@@ -199,6 +201,7 @@ print(bydate.imputed.mean)</code></pre>
 <pre><code>## [1] 10749.77</code></pre>
 <pre class="r"><code>print(bydate.imputed.median)</code></pre>
 <pre><code>## [1] 10641</code></pre>
+<p>The imputed dataset has a reduced mean and median, most of the NA values were replaced with 0,1,2 values since they occurred early in the day. Adding these into the dataset brought down the overall mean and median.</p>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
